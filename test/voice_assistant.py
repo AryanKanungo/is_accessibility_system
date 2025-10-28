@@ -57,7 +57,7 @@ def close_app(app_name):
 
 # ========== SYSTEM ACTIONS ==========
 def system_action(command):
-    if "close window" in command:
+    if "close window" in command:   
         pyautogui.hotkey("alt", "f4")
         speak("Window closed.")
     elif "lock" in command:

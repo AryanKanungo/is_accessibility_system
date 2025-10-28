@@ -64,10 +64,10 @@ def listen_once(timeout=4, phrase_time_limit=5):
     try:
         with sr.Microphone() as source:
             recognizer.adjust_for_ambient_noise(source, duration=0.5)
-            print("🎤 Listening for command...")
+            print(" Listening for command...")
             audio = recognizer.listen(source, timeout=timeout, phrase_time_limit=phrase_time_limit)
         command = recognizer.recognize_google(audio, language="en-in").lower()
-        print(f"🗣️ You said: {command}")
+        print(f" You said: {command}")
         return command
     except sr.WaitTimeoutError:
         return ""
